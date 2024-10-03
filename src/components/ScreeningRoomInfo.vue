@@ -1,17 +1,16 @@
 <script setup lang="ts">
 defineProps<{
-  msg: string
+  name: string,
+  msg: string,
+  CarriageNum: string
 }>()
 </script>
 
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-      You’ve successfully created a project with
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>. What's next?
-    </h3>
+  <div class="info">
+    <h1 class="text-center">{{ name }}</h1>
+    <h2 class="mt-[45px]">{{ msg }}</h2>
+    <p class="mt-[25px]">Carriage: {{ CarriageNum }}</p>
   </div>
 </template>
 
@@ -33,6 +32,7 @@ h3 {
 }
 
 @media (min-width: 1024px) {
+
   .greetings h1,
   .greetings h3 {
     text-align: left;
